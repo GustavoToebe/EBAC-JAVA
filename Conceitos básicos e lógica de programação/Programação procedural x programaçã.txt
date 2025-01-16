@@ -1,0 +1,64 @@
+Programação procedural x programação orientada a objeto
+
+A programação procedural seria uma forma mais antiga de fazer o projetos visto por exemplo em C, consiste em que o programa é escrito em um "classe" só, pegando e escrevendo os métodos um embaixo do outro e podendo utilizar as informações a qualquer momento no projeto.
+Já a programação orientada objeto tem algum pilares pré defidos em seu conceito que pode ser usado em diversas linguem por exemplo Java, C#, PHP etc, ela tem a construção de camadas vamos assim dizer, por conta da possiblidade de criar classes e assim usando as, no livro Java para Iniciantes ele comenta que na programação estruturada o código manipula os dados mas a orientação objetos os dados manipulam o código 
+
+
+// 
+
+Exemplo de código em portugol
+
+programa
+{
+    funcao inicio()
+    {
+        // Passo 1: Acordar
+        escrever("O alarme toca. Deseja acordar agora? (sim/nao): ")
+        cadeia resposta = ler_texto()
+
+        se (resposta == "nao") {
+            escrever("Você voltou a dormir e está atrasado!\n")
+            escrever("Recomeçando o processo...\n")
+            inicio()
+            retorne
+        }
+        
+        escrever("Você acordou. Hora de se arrumar!\n")
+
+        // Passo 2: Se arrumar
+        escrever("Escolha uma roupa apropriada para o trabalho (esporte fino/casual): ")
+        cadeia roupa = ler_texto()
+        
+        escrever("Você escolheu usar roupa " + roupa + ". Agora tome o café da manhã.\n")
+
+        escrever("Deseja tomar café da manhã? (sim/nao): ")
+        cadeia tomarCafe = ler_texto()
+
+        se (tomarCafe == "sim") {
+            escrever("Você tomou um delicioso café da manhã!\n")
+        } senao {
+            escrever("Você decidiu sair sem comer. Vai ficar com fome!\n")
+        }
+
+        // Passo 3: Chegar ao trabalho
+        escrever("Escolha o meio de transporte para ir ao trabalho (carro/onibus/bicicleta): ")
+        cadeia transporte = ler_texto()
+
+        escolher (transporte) {
+            caso "carro":
+                escrever("Você dirigiu até o trabalho e chegou rápido!\n")
+                pare
+            caso "onibus":
+                escrever("Você pegou o ônibus e chegou no horário!\n")
+                pare
+            caso "bicicleta":
+                escrever("Você foi de bicicleta e chegou saudável, mas cansado!\n")
+                pare
+            padrao:
+                escrever("Meio de transporte inválido! Você ficou em casa.\n")
+                retorne
+        }
+
+        escrever("Parabéns! Você chegou ao trabalho com sucesso.\n")
+    }
+}
