@@ -7,6 +7,9 @@ public class Atividade {
 
         Double media = (nota1 + nota2 + nota3 + nota4) / 4;
 
+        /**
+         * @author Gustavo
+         */
         System.out.println(media);
     }
 }
